@@ -1,9 +1,10 @@
-import smtplib
+import smtplib  #import SMTP lib
 
-ss = smtplib.SMTP('smtp.gmail.com', 587)
-ss.starttls()
-ss.login("yourid", "yourpass")
+ss = smtplib.SMTP('smtp.gmail.com', 587)   #connect with GOOGLE SMTP
 
-msg = "this is a testmail"
-ss.sendmail("yourid", "id you would like to send", msg)
+ss.starttls()                               #startServices
+ss.login("Enter your Email id", "Enter your password")               #Enter Login Details
+
+msg = "this is a testmail"                           #message you would like to attach      
+ss.sendmail("Your Email id", "id you would like to send", msg)  
 ss.quit()
